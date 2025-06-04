@@ -1,0 +1,513 @@
+/* Reset básico */ 
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto de los elementos */
+  font-family: 'Roboto', sans-serif; /* Fuente por defecto */ 
+}
+
+body {
+  body {
+    /* Font styles */
+    font-family: 'Roboto', sans-serif; /* Use sans-serif as a fallback */
+    font-size: 1.2rem; /* Larger base font size */
+    line-height: 1.6; /* Spacing between lines */
+    text-align: center; /* Center all text within the body */
+    color: #2E7D32; /* Green text color */
+
+    /* Background styles */
+    background-image: url('../img/fondo.jpg'); /* Page background image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center center; /* Center the background image */
+    background-size: cover; /* Make background image cover the entire element */
+    background-color: #f5fff7; /* Light background color for the body */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+
+    /* Layout and spacing */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex; /* Enable flexbox for centering content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally within flex container */
+    justify-content: center; /* Center content vertically within flex container */
+    padding: 2rem; /* Internal padding around content */
+    margin: 0 auto; /* Center the body element on the page */
+    max-width: 1200px; /* Limit the maximum width of the body content */
+
+    /* Overflow handling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+}
+
+/* Encabezado */
+header {
+  background-color: #389160;
+  color: #389160;
+  padding: 1rem;
+  }
+
+.logo {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 1rem; /* Espacio entre la imagen y el texto */
+  margin: 0 auto; /* Centra el logo en el header */
+  max-width: 1200px; /* Limita el ancho máximo del header */
+  padding: 1rem; /* Espacio interno del header */
+  background-color: #2E7D32; /* Fondo verde oscuro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.logo img {
+  height: 250px;
+  margin-right: 0rem;
+  padding: auto; /* Ajusta el espacio entre la imagen y el texto */
+  transition: transform 0.3s ease; 
+}
+
+
+
+/* Navegación */
+nav {
+  display: flex; 
+  justify-content: center; /* Centra horizontalmente */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
+  font-family: 'Roboto', sans-serif; /* Fuente específica para los enlaces */
+  border-radius: 5px; /* Bordes redondeados para los enlaces */
+  padding: 0.5rem 1rem; /* Espacio interno para los enlaces */
+  background-color: #4CAF50; /* Color de fondo verde */}
+
+/* Subrayado animado */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+  /* Ancho completo al hacer hover */
+  background-color: #f5fff7; /* Color del subrayado al hacer hover */
+  /* Cambia el color del subrayado al hacer hover */
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #57af5b; /* Un verde más claro al hacer hover */
+  border-radius: 5px;
+  color: #f5fff7; /* Cambia el color del texto al hacer hover */
+  text-decoration: none; /* Elimina el subrayado al hacer hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil al hacer hover */
+  transform: scale(1.05); /* Efecto de zoom al hacer hover */
+  font-weight: bold; /* Negrita al hacer hover */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra de texto al hacer hover */
+  font-family: 'Roboto', sans-serif; /* Fuente específica para los enlaces */
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
+  padding: 0.5rem 1rem; /* Espacio interno para los enlaces */
+  border-radius: 5px; /* Bordes redondeados para los enlaces */
+}
+
+
+/* Contenido principal */
+.main {
+  background-image: url('../img/fondo3.jpg'); /* Fondo del main */
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: auto;
+  padding: 2rem;
+  flex: 1; /* Permite que el main ocupe el espacio restante */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  color: #1B1B1B; /* Color del texto */
+  font-family: 'Roboto', sans-serif; /* Fuente específica para el contenido principal */
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
+  line-height: 1.6; /* Espaciado entre líneas */
+  text-align: center; /* Centra el texto */
+  margin: 0 auto; /* Centra el main en la página */
+  max-width: 1200px; /* Limita el ancho máximo del main */
+  padding: 2rem; /* Espacio interno del main */
+}
+
+/* Donar */
+.form-box {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #f1fef1;
+  border: 2px solid #a5d6a7;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #2e7d32;
+  transition: transform 0.3s ease;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #2e7d32;
+  transition: background-color 0.3s ease;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #f5fff7; /* Fondo claro para el formulario */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #2e7d32;
+  transition: background-color 0.3s ease;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background-color: #f5fff7; /* Fondo claro para el grupo de formulario */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Asegura que el grupo de formulario ocupe todo el ancho */
+  max-width: 500px; /* Limita el ancho máximo del grupo de formulario */
+  margin: 0 auto; /* Centra el grupo de formulario */
+  padding: 1rem; /* Espacio interno del grupo de formulario */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f5fff7; /* Fondo claro para el grupo de formulario */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: #438046;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #2e7d32;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-button {
+  background-color: #4baf50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  font-family: 'Roboto', sans-serif; /* Fuente específica para el botón */
+  font-weight: bold; /* Negrita para el botón */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  width: 100%; /* Asegura que el botón ocupe todo el ancho */
+  max-width: 200px; /* Limita el ancho máximo del botón */
+  margin-top: 1rem; /* Espacio superior para el botón */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center; /* Centra el texto del botón */
+  align-items: center; /* Centra verticalmente el texto del botón */
+}
+
+.form-button:hover {
+  background-color: #2c7c30;
+}
+
+
+/*Voluntarios */
+.contenedor-voluntarios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.vol-box {
+  display: flex;
+  width: 80%;
+  height: 250px; /* Altura fija para todas las cajas */
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.vol-box img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vol-texto {
+  padding: 1.5rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Inversión de orden para la segunda box */
+.vol-box.inverso {
+  flex-direction: row-reverse;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .vol-box {
+    flex-direction: column;
+    width: 95%;
+    height: auto; /* Permite que se adapte en pantallas pequeñas */
+  }
+
+  .vol-box img,
+  .vol-texto {
+    width: 100%;
+    height: auto;
+  }
+
+  .vol-box.inverso {
+    flex-direction: column;
+  }
+}
+
+
+/* Proyecto */
+.proyecto-box-vertical {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.proyecto-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.proyecto-texto {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Responsive opcional: más espacio entre imagen y texto en móvil */
+@media (max-width: 768px) {
+  .proyecto-box-vertical {
+    width: 95%;
+  }
+}
+
+
+/* Donar */
+.donaciones-box {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Lazy Dog', cursive;
+}
+
+.donaciones-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f5fff7;
+}
+
+#buscador {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #b5e2c1;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
+
+#lista-donaciones {
+  list-style-type: none;
+  padding: 0;
+}
+
+.donacion-item {
+  background-color: #f5fff7;
+  border: 1px solid #c8e6c9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  color: #2d4739;
+  transition: background-color 0.3s ease;
+}
+
+.donacion-item:hover {
+  background-color: #e0f5e9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donaciones-box {
+    width: 95%;
+  }
+}
+
+
+/* Registrarse */
+.registro-box {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Lazy Dog', cursive;
+}
+
+.registro-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #207f4c;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #40815e;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #b5e2c1;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group input:invalid,
+.form-group textarea:invalid {
+  border-color: #3cb371;
+}
+
+.boton-enviar {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.6rem 1.5rem;
+  background-color: #388E3C;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: 'Lazy Dog', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: #2d8f5c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .registro-box {
+    width: 95%;
+  }
+}
+
+/* Botón Volver */
+.volver {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.volver a {
+  background-color: #2E7D32;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.volver a:hover {
+  background-color: #388E3C;
+  text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+  background-color: #2E7D32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
